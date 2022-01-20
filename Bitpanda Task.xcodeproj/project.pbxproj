@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B750A8B279A0393002F92BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8A279A0393002F92BE /* AppDelegate.swift */; };
+		1B750A8D279A0393002F92BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8C279A0393002F92BE /* SceneDelegate.swift */; };
+		1B750A8F279A0393002F92BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8E279A0393002F92BE /* ViewController.swift */; };
+		1B750A92279A0393002F92BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A90279A0393002F92BE /* Main.storyboard */; };
+		1B750A94279A0394002F92BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A93279A0394002F92BE /* Assets.xcassets */; };
+		1B750A97279A0394002F92BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A95279A0394002F92BE /* LaunchScreen.storyboard */; };
+		1B750AA2279A0394002F92BE /* Bitpanda_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AA1279A0394002F92BE /* Bitpanda_TaskTests.swift */; };
+		1B750AAC279A0394002F92BE /* Bitpanda_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */; };
+		1B750AAE279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B750A9E279A0394002F92BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B750A7F279A0393002F92BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B750A86279A0393002F92BE;
+			remoteInfo = "Bitpanda Task";
+		};
+		1B750AA8279A0394002F92BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B750A7F279A0393002F92BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B750A86279A0393002F92BE;
+			remoteInfo = "Bitpanda Task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B750A87279A0393002F92BE /* Bitpanda Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitpanda Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B750A8A279A0393002F92BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B750A8C279A0393002F92BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1B750A8E279A0393002F92BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B750A91279A0393002F92BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B750A93279A0394002F92BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B750A96279A0394002F92BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B750A98279A0394002F92BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitpanda TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B750AA1279A0394002F92BE /* Bitpanda_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskTests.swift; sourceTree = "<group>"; };
+		1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitpanda TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskUITests.swift; sourceTree = "<group>"; };
+		1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B750A84279A0393002F92BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750A9A279A0394002F92BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750AA4279A0394002F92BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B750A7E279A0393002F92BE = {
+			isa = PBXGroup;
+			children = (
+				1B750A89279A0393002F92BE /* Bitpanda Task */,
+				1B750AA0279A0394002F92BE /* Bitpanda TaskTests */,
+				1B750AAA279A0394002F92BE /* Bitpanda TaskUITests */,
+				1B750A88279A0393002F92BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B750A88279A0393002F92BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B750A87279A0393002F92BE /* Bitpanda Task.app */,
+				1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */,
+				1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B750A89279A0393002F92BE /* Bitpanda Task */ = {
+			isa = PBXGroup;
+			children = (
+				1B750A8A279A0393002F92BE /* AppDelegate.swift */,
+				1B750A8C279A0393002F92BE /* SceneDelegate.swift */,
+				1B750A8E279A0393002F92BE /* ViewController.swift */,
+				1B750A90279A0393002F92BE /* Main.storyboard */,
+				1B750A93279A0394002F92BE /* Assets.xcassets */,
+				1B750A95279A0394002F92BE /* LaunchScreen.storyboard */,
+				1B750A98279A0394002F92BE /* Info.plist */,
+			);
+			path = "Bitpanda Task";
+			sourceTree = "<group>";
+		};
+		1B750AA0279A0394002F92BE /* Bitpanda TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B750AA1279A0394002F92BE /* Bitpanda_TaskTests.swift */,
+			);
+			path = "Bitpanda TaskTests";
+			sourceTree = "<group>";
+		};
+		1B750AAA279A0394002F92BE /* Bitpanda TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */,
+				1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */,
+			);
+			path = "Bitpanda TaskUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B750A86279A0393002F92BE /* Bitpanda Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B750AB1279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda Task" */;
+			buildPhases = (
+				1B750A83279A0393002F92BE /* Sources */,
+				1B750A84279A0393002F92BE /* Frameworks */,
+				1B750A85279A0393002F92BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bitpanda Task";
+			productName = "Bitpanda Task";
+			productReference = 1B750A87279A0393002F92BE /* Bitpanda Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B750A9C279A0394002F92BE /* Bitpanda TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B750AB4279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskTests" */;
+			buildPhases = (
+				1B750A99279A0394002F92BE /* Sources */,
+				1B750A9A279A0394002F92BE /* Frameworks */,
+				1B750A9B279A0394002F92BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B750A9F279A0394002F92BE /* PBXTargetDependency */,
+			);
+			name = "Bitpanda TaskTests";
+			productName = "Bitpanda TaskTests";
+			productReference = 1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B750AA6279A0394002F92BE /* Bitpanda TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B750AB7279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskUITests" */;
+			buildPhases = (
+				1B750AA3279A0394002F92BE /* Sources */,
+				1B750AA4279A0394002F92BE /* Frameworks */,
+				1B750AA5279A0394002F92BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B750AA9279A0394002F92BE /* PBXTargetDependency */,
+			);
+			name = "Bitpanda TaskUITests";
+			productName = "Bitpanda TaskUITests";
+			productReference = 1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B750A7F279A0393002F92BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1B750A86279A0393002F92BE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					1B750A9C279A0394002F92BE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1B750A86279A0393002F92BE;
+					};
+					1B750AA6279A0394002F92BE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1B750A86279A0393002F92BE;
+					};
+				};
+			};
+			buildConfigurationList = 1B750A82279A0393002F92BE /* Build configuration list for PBXProject "Bitpanda Task" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B750A7E279A0393002F92BE;
+			productRefGroup = 1B750A88279A0393002F92BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B750A86279A0393002F92BE /* Bitpanda Task */,
+				1B750A9C279A0394002F92BE /* Bitpanda TaskTests */,
+				1B750AA6279A0394002F92BE /* Bitpanda TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B750A85279A0393002F92BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B750A97279A0394002F92BE /* LaunchScreen.storyboard in Resources */,
+				1B750A94279A0394002F92BE /* Assets.xcassets in Resources */,
+				1B750A92279A0393002F92BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750A9B279A0394002F92BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750AA5279A0394002F92BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B750A83279A0393002F92BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B750A8F279A0393002F92BE /* ViewController.swift in Sources */,
+				1B750A8B279A0393002F92BE /* AppDelegate.swift in Sources */,
+				1B750A8D279A0393002F92BE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750A99279A0394002F92BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B750AA2279A0394002F92BE /* Bitpanda_TaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B750AA3279A0394002F92BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B750AAE279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift in Sources */,
+				1B750AAC279A0394002F92BE /* Bitpanda_TaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B750A9F279A0394002F92BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B750A86279A0393002F92BE /* Bitpanda Task */;
+			targetProxy = 1B750A9E279A0394002F92BE /* PBXContainerItemProxy */;
+		};
+		1B750AA9279A0394002F92BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B750A86279A0393002F92BE /* Bitpanda Task */;
+			targetProxy = 1B750AA8279A0394002F92BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1B750A90279A0393002F92BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B750A91279A0393002F92BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B750A95279A0394002F92BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B750A96279A0394002F92BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B750AAF279A0394002F92BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B750AB0279A0394002F92BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B750AB2279A0394002F92BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bitpanda Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B750AB3279A0394002F92BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bitpanda Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B750AB5279A0394002F92BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitpanda Task.app/Bitpanda Task";
+			};
+			name = Debug;
+		};
+		1B750AB6279A0394002F92BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitpanda Task.app/Bitpanda Task";
+			};
+			name = Release;
+		};
+		1B750AB8279A0394002F92BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bitpanda Task";
+			};
+			name = Debug;
+		};
+		1B750AB9279A0394002F92BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FWWLJ39J9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bitpanda Task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B750A82279A0393002F92BE /* Build configuration list for PBXProject "Bitpanda Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B750AAF279A0394002F92BE /* Debug */,
+				1B750AB0279A0394002F92BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B750AB1279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B750AB2279A0394002F92BE /* Debug */,
+				1B750AB3279A0394002F92BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B750AB4279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B750AB5279A0394002F92BE /* Debug */,
+				1B750AB6279A0394002F92BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B750AB7279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B750AB8279A0394002F92BE /* Debug */,
+				1B750AB9279A0394002F92BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B750A7F279A0393002F92BE /* Project object */;
+}

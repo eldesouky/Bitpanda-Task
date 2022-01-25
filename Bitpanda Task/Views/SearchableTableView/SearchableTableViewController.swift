@@ -6,21 +6,24 @@
 //
 
 import UIKit
+import SwiftUI
+
 
 extension UITableViewCell {
-	
 	class func cellReuseIdentifier() -> String {
 		return "\(self)"
 	}
 }
 
-class SearchableListingViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
+//MARK: - SearchableListingViewController
+class SearchableListingViewController: UIViewController {
+	
 	//MARK: - Props
 	lazy var searchBar: UISearchBar = {
 		let searchBar = UISearchBar()
-		searchBar.translatesAutoresizingMaskIntoConstraints = false
 		searchBar.delegate = self
 		searchBar.searchBarStyle = .minimal
+		searchBar.placeholder = "Search"
 		return searchBar
 	}()
 		
@@ -29,28 +32,20 @@ class SearchableListingViewController: UIViewController, UITableViewDelegate, UI
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		tableView.dataSource = dataSource
 		tableView.delegate = self
-		tableView.sectionHeaderTopPadding = .leastNormalMagnitude
+		if #available(iOS 15.0, *) {
+			//tableView.sectionHeaderTopPadding = .leastNormalMagnitude
+		}
 		tableView.separatorStyle = .none
 		tableView.backgroundColor = .systemBackground
+
 		return tableView
 	}()
 	
 	var dataSource: SearchableDataSource
 	var tableViewCells: [UITableViewCell.Type]
 	
-	//MARK: - Life Cycle
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		setupTableView()
-		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
-		self.view.addGestureRecognizer(tapGesture)
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		reloadData()
-	}
-	
+	//MARK: - init
+
 	init(dataSource: SearchableDataSource, tableViewCells: [UITableViewCell.Type]){
 		self.dataSource = dataSource
 		self.tableViewCells = tableViewCells
@@ -61,49 +56,53 @@ class SearchableListingViewController: UIViewController, UITableViewDelegate, UI
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	//MARK: - Life Cycle
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		navigationController?.edgesForExtendedLayout = []
+		setupTableView()
+		addKeyboardDismissGesture()
+		setupSearchBarDismissButton()
+	}
+	
+	
 	//MARK: - UI Setup
 	func setupTableView() {
 		view.addSubview(tableView)
 		
 		// register tableView cells
 		for cell in tableViewCells {
-//			let cellReuseIdentifier = cell.cellReuseIdentifier()
-//			let nibCell = UINib(nibName: cellReuseIdentifier, bundle: nil)
-//			tableView.register(nibCell, forCellReuseIdentifier: cellReuseIdentifier)
-			
 			tableView.register(cell.self, forCellReuseIdentifier: cell.cellReuseIdentifier())
-
 		}
 		
-//		tableView.register(AssetTableViewCell.self, forCellReuseIdentifier: AssetTableDataSource.assetTableViewCell)
-//		tableView.register(CommodityAssetTableViewCell.self, forCellReuseIdentifier: AssetTableDataSource.commodityAssetTableViewCell)
-		
 		// constraints
-		tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+		tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
 		tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
 		tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-		tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+		tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 	}
 	
-	func setupSearchBar(into: UIView) {
-		into.addSubview(searchBar)
-		searchBar.topAnchor.constraint(equalTo: into.topAnchor, constant: -5).isActive = true
-		searchBar.leftAnchor.constraint(equalTo: into.leftAnchor, constant: 10).isActive = true
-		searchBar.rightAnchor.constraint(equalTo: into.rightAnchor, constant: -10).isActive = true
-		searchBar.bottomAnchor.constraint(equalTo: into.bottomAnchor, constant: -5).isActive = true
-		
-		// workaround to target search bar dismiss button
+	private func createTableHeaderStackView() -> UIStackView {
+		let stackView = UIStackView(arrangedSubviews: getTableHeaderStackViews())
+		stackView.backgroundColor = .systemBackground
+		stackView.isLayoutMarginsRelativeArrangement = true
+		stackView.layoutMargins = UIEdgeInsets(top: 0, left: 5, bottom: 5, right: 5)
+		stackView.axis = .vertical
+		return stackView
+	}
+	
+	//MARK: - Actions
+	private func addKeyboardDismissGesture(){
+		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+		self.view.addGestureRecognizer(tapGesture)
+	}
+	
+	/// adds target to search bar dismiss button
+	private func setupSearchBarDismissButton() {
 		if let searchTextField = searchBar.value(forKey: "searchField") as? UITextField , let clearButton = searchTextField.value(forKey: "_clearButton") as? UIButton {
 
 			 clearButton.addTarget(self, action: #selector(self.searchBarDismissIsClicked), for: .touchUpInside)
 		}
-	}
-
-	//MARK: - Actions
-	/// fetches data from source and reload the tableView
-	func reloadData(){
-		dataSource.fetchData()
-		reloadTableViewWithAnimation()
 	}
 	
 	@objc func searchBarDismissIsClicked() {
@@ -121,18 +120,31 @@ class SearchableListingViewController: UIViewController, UITableViewDelegate, UI
 						  options: .transitionCrossDissolve,
 						  animations: { self.tableView.reloadData() })
 	}
-
-	//MARK: - UITableViewDelegate
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		let headerView = UIView()
-		setupSearchBar(into: headerView)
-		headerView.backgroundColor = .systemBackground
-		return headerView
+	
+	/// gets the list of views to be stacked vertically in header
+	///  - can be overridden to customise header view
+	///  - important: searchBar view must always be returned in list
+	///  - returns: list of views to be stacked vertically in header
+	func getTableHeaderStackViews() -> [UIView] {
+		return [searchBar]
 	}
+}
 
-	//MARK: - UISearchBarDelegate
+//MARK: - UITableViewDelegate
+extension SearchableListingViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		return createTableHeaderStackView()
+	}
+}
+
+//MARK: - UISearchBarDelegate
+extension SearchableListingViewController: UISearchBarDelegate {
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		dataSource.search(query: searchText)
 		reloadTableViewWithAnimation()
+	}
+	
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		searchBar.resignFirstResponder()
 	}
 }

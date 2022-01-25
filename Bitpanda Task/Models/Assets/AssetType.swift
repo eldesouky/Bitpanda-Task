@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - AssetType
+enum AssetType {
+	case fiat, commodity, cryptoCoin
+}

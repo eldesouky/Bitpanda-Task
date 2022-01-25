@@ -7,15 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B601616279F142C009A27ED /* WalletAssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B601615279F142C009A27ED /* WalletAssetTableViewCell.swift */; };
+		1B601619279F1728009A27ED /* AssetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B601618279F1728009A27ED /* AssetType.swift */; };
+		1B60161D279F6FB6009A27ED /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60161C279F6FB6009A27ED /* UIView+Shadow.swift */; };
+		1B601622279F753E009A27ED /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B601621279F753E009A27ED /* SplashViewController.swift */; };
+		1B60162727A09DD7009A27ED /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B60162627A09DD7009A27ED /* Readme.md */; };
+		1B61D7CA279CC0A40035581E /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7C9279CC0A40035581E /* Commodity.swift */; };
+		1B61D7CD279CC1570035581E /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7CC279CC1570035581E /* Fiat.swift */; };
+		1B61D7CF279CC17A0035581E /* AssetInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7CE279CC17A0035581E /* AssetInterface.swift */; };
+		1B61D7D1279CC1AA0035581E /* WalletInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7D0279CC1AA0035581E /* WalletInterface.swift */; };
+		1B61D7D3279CC1F20035581E /* CommodityWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7D2279CC1F20035581E /* CommodityWallet.swift */; };
+		1B61D7DC279CF5DA0035581E /* FiatWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61D7DB279CF5DA0035581E /* FiatWallet.swift */; };
 		1B750A8B279A0393002F92BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8A279A0393002F92BE /* AppDelegate.swift */; };
 		1B750A8D279A0393002F92BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8C279A0393002F92BE /* SceneDelegate.swift */; };
-		1B750A8F279A0393002F92BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750A8E279A0393002F92BE /* ViewController.swift */; };
-		1B750A92279A0393002F92BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A90279A0393002F92BE /* Main.storyboard */; };
 		1B750A94279A0394002F92BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A93279A0394002F92BE /* Assets.xcassets */; };
 		1B750A97279A0394002F92BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B750A95279A0394002F92BE /* LaunchScreen.storyboard */; };
 		1B750AA2279A0394002F92BE /* Bitpanda_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AA1279A0394002F92BE /* Bitpanda_TaskTests.swift */; };
-		1B750AAC279A0394002F92BE /* Bitpanda_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */; };
-		1B750AAE279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */; };
+		1B750ABB279A0633002F92BE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750ABA279A0633002F92BE /* TabBarController.swift */; };
+		1B750ABD279A1129002F92BE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750ABC279A1129002F92BE /* DataManager.swift */; };
+		1B750ABF279A220B002F92BE /* Mastrerdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B750ABE279A220B002F92BE /* Mastrerdata.json */; };
+		1B750AC1279B0369002F92BE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AC0279B0369002F92BE /* UserData.swift */; };
+		1B750AC3279B03AC002F92BE /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AC2279B03AC002F92BE /* AssetsViewController.swift */; };
+		1B750AC5279B0DEA002F92BE /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B750AC4279B0DEA002F92BE /* AssetTableViewCell.swift */; };
+		1B79B199279B1455009D6E3F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1B79B198279B1455009D6E3F /* Kingfisher */; };
+		1B79B19C279B1A71009D6E3F /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 1B79B19B279B1A71009D6E3F /* PocketSVG */; };
+		1B79B19E279B1ACD009D6E3F /* SVGProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79B19D279B1ACD009D6E3F /* SVGProcessor.swift */; };
+		1BB64FB7279D9C5B00929CB9 /* SearchableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FB6279D9C5B00929CB9 /* SearchableTableViewController.swift */; };
+		1BB64FBA279DA07600929CB9 /* SearchableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FB9279DA07600929CB9 /* SearchableDataSource.swift */; };
+		1BB64FBC279DA0FD00929CB9 /* WalletListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FBB279DA0FD00929CB9 /* WalletListDataSource.swift */; };
+		1BB64FC4279DBBC500929CB9 /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */; };
+		1BB64FC8279DE95500929CB9 /* WalletTypeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */; };
+		1BE7B8A8279B3687007C5E6A /* AssetListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8A7279B3687007C5E6A /* AssetListDataSource.swift */; };
+		1BE7B8AA279B4B17007C5E6A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8A9279B4B17007C5E6A /* AppColors.swift */; };
+		1BE7B8AE279B850D007C5E6A /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */; };
+		1BE7B8B5279BA034007C5E6A /* WalletListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8B4279BA034007C5E6A /* WalletListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,29 +51,44 @@
 			remoteGlobalIDString = 1B750A86279A0393002F92BE;
 			remoteInfo = "Bitpanda Task";
 		};
-		1B750AA8279A0394002F92BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B750A7F279A0393002F92BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B750A86279A0393002F92BE;
-			remoteInfo = "Bitpanda Task";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B601615279F142C009A27ED /* WalletAssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAssetTableViewCell.swift; sourceTree = "<group>"; };
+		1B601618279F1728009A27ED /* AssetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetType.swift; sourceTree = "<group>"; };
+		1B60161C279F6FB6009A27ED /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		1B601621279F753E009A27ED /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1B60162427A0941A009A27ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B60162627A09DD7009A27ED /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		1B61D7C9279CC0A40035581E /* Commodity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
+		1B61D7CC279CC1570035581E /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		1B61D7CE279CC17A0035581E /* AssetInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetInterface.swift; sourceTree = "<group>"; };
+		1B61D7D0279CC1AA0035581E /* WalletInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInterface.swift; sourceTree = "<group>"; };
+		1B61D7D2279CC1F20035581E /* CommodityWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityWallet.swift; sourceTree = "<group>"; };
+		1B61D7DB279CF5DA0035581E /* FiatWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FiatWallet.swift; path = ../../../../../Downloads/FiatWallet.swift; sourceTree = "<group>"; };
 		1B750A87279A0393002F92BE /* Bitpanda Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitpanda Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B750A8A279A0393002F92BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B750A8C279A0393002F92BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B750A8E279A0393002F92BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B750A91279A0393002F92BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B750A93279A0394002F92BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B750A96279A0394002F92BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1B750A98279A0394002F92BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitpanda TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B750AA1279A0394002F92BE /* Bitpanda_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskTests.swift; sourceTree = "<group>"; };
-		1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitpanda TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskUITests.swift; sourceTree = "<group>"; };
-		1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitpanda_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B750ABA279A0633002F92BE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1B750ABC279A1129002F92BE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1B750ABE279A220B002F92BE /* Mastrerdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mastrerdata.json; sourceTree = "<group>"; };
+		1B750AC0279B0369002F92BE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1B750AC2279B03AC002F92BE /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
+		1B750AC4279B0DEA002F92BE /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
+		1B79B19D279B1ACD009D6E3F /* SVGProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGProcessor.swift; sourceTree = "<group>"; };
+		1BB64FB6279D9C5B00929CB9 /* SearchableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableTableViewController.swift; sourceTree = "<group>"; };
+		1BB64FB9279DA07600929CB9 /* SearchableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDataSource.swift; sourceTree = "<group>"; };
+		1BB64FBB279DA0FD00929CB9 /* WalletListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListDataSource.swift; sourceTree = "<group>"; };
+		1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
+		1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTypeCardView.swift; sourceTree = "<group>"; };
+		1BE7B8A7279B3687007C5E6A /* AssetListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListDataSource.swift; sourceTree = "<group>"; };
+		1BE7B8A9279B4B17007C5E6A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
+		1BE7B8B4279BA034007C5E6A /* WalletListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B79B199279B1455009D6E3F /* Kingfisher in Frameworks */,
+				1B79B19C279B1A71009D6E3F /* PocketSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,22 +108,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B750AA4279A0394002F92BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B601617279F1435009A27ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B601615279F142C009A27ED /* WalletAssetTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1B60161E279F6FD0009A27ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1B79B19D279B1ACD009D6E3F /* SVGProcessor.swift */,
+				1B60161C279F6FB6009A27ED /* UIView+Shadow.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1B60162327A06497009A27ED /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1B750A95279A0394002F92BE /* LaunchScreen.storyboard */,
+				1B601621279F753E009A27ED /* SplashViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		1B61D7CB279CC0B70035581E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1B61D7CE279CC17A0035581E /* AssetInterface.swift */,
+				1B61D7C9279CC0A40035581E /* Commodity.swift */,
+				1B61D7CC279CC1570035581E /* Fiat.swift */,
+				1B601618279F1728009A27ED /* AssetType.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		1B61D7D6279CED1E0035581E /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				1B61D7D0279CC1AA0035581E /* WalletInterface.swift */,
+				1B61D7DB279CF5DA0035581E /* FiatWallet.swift */,
+				1B61D7D2279CC1F20035581E /* CommodityWallet.swift */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
 		1B750A7E279A0393002F92BE = {
 			isa = PBXGroup;
 			children = (
+				1B60162627A09DD7009A27ED /* Readme.md */,
 				1B750A89279A0393002F92BE /* Bitpanda Task */,
 				1B750AA0279A0394002F92BE /* Bitpanda TaskTests */,
-				1B750AAA279A0394002F92BE /* Bitpanda TaskUITests */,
 				1B750A88279A0393002F92BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +173,6 @@
 			children = (
 				1B750A87279A0393002F92BE /* Bitpanda Task.app */,
 				1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */,
-				1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,11 +182,11 @@
 			children = (
 				1B750A8A279A0393002F92BE /* AppDelegate.swift */,
 				1B750A8C279A0393002F92BE /* SceneDelegate.swift */,
-				1B750A8E279A0393002F92BE /* ViewController.swift */,
-				1B750A90279A0393002F92BE /* Main.storyboard */,
-				1B750A93279A0394002F92BE /* Assets.xcassets */,
-				1B750A95279A0394002F92BE /* LaunchScreen.storyboard */,
-				1B750A98279A0394002F92BE /* Info.plist */,
+				1B750ABC279A1129002F92BE /* DataManager.swift */,
+				1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */,
+				1BE7B8AF279B8539007C5E6A /* Resources */,
+				1BE7B8B2279B859E007C5E6A /* Models */,
+				1BE7B8B0279B855F007C5E6A /* Views */,
 			);
 			path = "Bitpanda Task";
 			sourceTree = "<group>";
@@ -118,13 +199,85 @@
 			path = "Bitpanda TaskTests";
 			sourceTree = "<group>";
 		};
-		1B750AAA279A0394002F92BE /* Bitpanda TaskUITests */ = {
+		1BB64FB8279DA04300929CB9 /* SearchableTableView */ = {
 			isa = PBXGroup;
 			children = (
-				1B750AAB279A0394002F92BE /* Bitpanda_TaskUITests.swift */,
-				1B750AAD279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift */,
+				1BB64FB6279D9C5B00929CB9 /* SearchableTableViewController.swift */,
+				1BB64FB9279DA07600929CB9 /* SearchableDataSource.swift */,
 			);
-			path = "Bitpanda TaskUITests";
+			path = SearchableTableView;
+			sourceTree = "<group>";
+		};
+		1BB64FC9279E018400929CB9 /* Wallets List */ = {
+			isa = PBXGroup;
+			children = (
+				1BE7B8B4279BA034007C5E6A /* WalletListViewController.swift */,
+				1BB64FBB279DA0FD00929CB9 /* WalletListDataSource.swift */,
+				1B601617279F1435009A27ED /* Cells */,
+			);
+			path = "Wallets List";
+			sourceTree = "<group>";
+		};
+		1BE7B8AF279B8539007C5E6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B60162427A0941A009A27ED /* Info.plist */,
+				1B750ABE279A220B002F92BE /* Mastrerdata.json */,
+				1BE7B8A9279B4B17007C5E6A /* AppColors.swift */,
+				1B750A93279A0394002F92BE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1BE7B8B0279B855F007C5E6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B750ABA279A0633002F92BE /* TabBarController.swift */,
+				1B60162327A06497009A27ED /* Launch */,
+				1BB64FB8279DA04300929CB9 /* SearchableTableView */,
+				1BE7B8B1279B856A007C5E6A /* Assets Screen */,
+				1BE7B8B6279C3991007C5E6A /* Wallets Screen */,
+				1B60161E279F6FD0009A27ED /* Helpers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BE7B8B1279B856A007C5E6A /* Assets Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1B750AC2279B03AC002F92BE /* AssetsViewController.swift */,
+				1BE7B8A7279B3687007C5E6A /* AssetListDataSource.swift */,
+				1BE7B8B3279B85C5007C5E6A /* Cells */,
+			);
+			path = "Assets Screen";
+			sourceTree = "<group>";
+		};
+		1BE7B8B2279B859E007C5E6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B750AC0279B0369002F92BE /* UserData.swift */,
+				1B61D7D6279CED1E0035581E /* Wallets */,
+				1B61D7CB279CC0B70035581E /* Assets */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BE7B8B3279B85C5007C5E6A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B750AC4279B0DEA002F92BE /* AssetTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1BE7B8B6279C3991007C5E6A /* Wallets Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */,
+				1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */,
+				1BB64FC9279E018400929CB9 /* Wallets List */,
+			);
+			path = "Wallets Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +296,10 @@
 			dependencies = (
 			);
 			name = "Bitpanda Task";
+			packageProductDependencies = (
+				1B79B198279B1455009D6E3F /* Kingfisher */,
+				1B79B19B279B1A71009D6E3F /* PocketSVG */,
+			);
 			productName = "Bitpanda Task";
 			productReference = 1B750A87279A0393002F92BE /* Bitpanda Task.app */;
 			productType = "com.apple.product-type.application";
@@ -165,24 +322,6 @@
 			productReference = 1B750A9D279A0394002F92BE /* Bitpanda TaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1B750AA6279A0394002F92BE /* Bitpanda TaskUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B750AB7279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskUITests" */;
-			buildPhases = (
-				1B750AA3279A0394002F92BE /* Sources */,
-				1B750AA4279A0394002F92BE /* Frameworks */,
-				1B750AA5279A0394002F92BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B750AA9279A0394002F92BE /* PBXTargetDependency */,
-			);
-			name = "Bitpanda TaskUITests";
-			productName = "Bitpanda TaskUITests";
-			productReference = 1B750AA7279A0394002F92BE /* Bitpanda TaskUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +339,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 1B750A86279A0393002F92BE;
 					};
-					1B750AA6279A0394002F92BE = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 1B750A86279A0393002F92BE;
-					};
 				};
 			};
 			buildConfigurationList = 1B750A82279A0393002F92BE /* Build configuration list for PBXProject "Bitpanda Task" */;
@@ -215,13 +350,16 @@
 				Base,
 			);
 			mainGroup = 1B750A7E279A0393002F92BE;
+			packageReferences = (
+				1B79B197279B1455009D6E3F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1B79B19A279B1A71009D6E3F /* XCRemoteSwiftPackageReference "PocketSVG" */,
+			);
 			productRefGroup = 1B750A88279A0393002F92BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1B750A86279A0393002F92BE /* Bitpanda Task */,
 				1B750A9C279A0394002F92BE /* Bitpanda TaskTests */,
-				1B750AA6279A0394002F92BE /* Bitpanda TaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +371,12 @@
 			files = (
 				1B750A97279A0394002F92BE /* LaunchScreen.storyboard in Resources */,
 				1B750A94279A0394002F92BE /* Assets.xcassets in Resources */,
-				1B750A92279A0393002F92BE /* Main.storyboard in Resources */,
+				1B60162727A09DD7009A27ED /* Readme.md in Resources */,
+				1B750ABF279A220B002F92BE /* Mastrerdata.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B750A9B279A0394002F92BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B750AA5279A0394002F92BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +390,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B750A8F279A0393002F92BE /* ViewController.swift in Sources */,
+				1B601619279F1728009A27ED /* AssetType.swift in Sources */,
+				1BB64FBC279DA0FD00929CB9 /* WalletListDataSource.swift in Sources */,
+				1B60161D279F6FB6009A27ED /* UIView+Shadow.swift in Sources */,
+				1B750AC1279B0369002F92BE /* UserData.swift in Sources */,
+				1BE7B8AA279B4B17007C5E6A /* AppColors.swift in Sources */,
+				1B750ABD279A1129002F92BE /* DataManager.swift in Sources */,
+				1BB64FBA279DA07600929CB9 /* SearchableDataSource.swift in Sources */,
+				1B61D7D3279CC1F20035581E /* CommodityWallet.swift in Sources */,
+				1BB64FC8279DE95500929CB9 /* WalletTypeCardView.swift in Sources */,
+				1B601616279F142C009A27ED /* WalletAssetTableViewCell.swift in Sources */,
+				1B750ABB279A0633002F92BE /* TabBarController.swift in Sources */,
+				1B61D7CF279CC17A0035581E /* AssetInterface.swift in Sources */,
+				1BE7B8A8279B3687007C5E6A /* AssetListDataSource.swift in Sources */,
+				1B61D7DC279CF5DA0035581E /* FiatWallet.swift in Sources */,
 				1B750A8B279A0393002F92BE /* AppDelegate.swift in Sources */,
+				1BB64FC4279DBBC500929CB9 /* WalletsViewController.swift in Sources */,
 				1B750A8D279A0393002F92BE /* SceneDelegate.swift in Sources */,
+				1BE7B8AE279B850D007C5E6A /* DataFormatter.swift in Sources */,
+				1B601622279F753E009A27ED /* SplashViewController.swift in Sources */,
+				1B61D7CA279CC0A40035581E /* Commodity.swift in Sources */,
+				1B79B19E279B1ACD009D6E3F /* SVGProcessor.swift in Sources */,
+				1B61D7CD279CC1570035581E /* Fiat.swift in Sources */,
+				1BB64FB7279D9C5B00929CB9 /* SearchableTableViewController.swift in Sources */,
+				1B750AC3279B03AC002F92BE /* AssetsViewController.swift in Sources */,
+				1B750AC5279B0DEA002F92BE /* AssetTableViewCell.swift in Sources */,
+				1B61D7D1279CC1AA0035581E /* WalletInterface.swift in Sources */,
+				1BE7B8B5279BA034007C5E6A /* WalletListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +428,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B750AA3279A0394002F92BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B750AAE279A0394002F92BE /* Bitpanda_TaskUITestsLaunchTests.swift in Sources */,
-				1B750AAC279A0394002F92BE /* Bitpanda_TaskUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +436,9 @@
 			target = 1B750A86279A0393002F92BE /* Bitpanda Task */;
 			targetProxy = 1B750A9E279A0394002F92BE /* PBXContainerItemProxy */;
 		};
-		1B750AA9279A0394002F92BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B750A86279A0393002F92BE /* Bitpanda Task */;
-			targetProxy = 1B750AA8279A0394002F92BE /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1B750A90279A0393002F92BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B750A91279A0393002F92BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B750A95279A0394002F92BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,12 +575,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4FWWLJ39J9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bitpanda Task/Info.plist";
+				INFOPLIST_FILE = "Bitpanda Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,12 +605,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4FWWLJ39J9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bitpanda Task/Info.plist";
+				INFOPLIST_FILE = "Bitpanda Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,7 +635,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4FWWLJ39J9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,7 +655,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4FWWLJ39J9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,42 +663,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitpanda Task.app/Bitpanda Task";
-			};
-			name = Release;
-		};
-		1B750AB8279A0394002F92BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4FWWLJ39J9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bitpanda Task";
-			};
-			name = Debug;
-		};
-		1B750AB9279A0394002F92BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4FWWLJ39J9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dos.Bitpanda-TaskUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bitpanda Task";
 			};
 			name = Release;
 		};
@@ -594,16 +696,39 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B750AB7279A0394002F92BE /* Build configuration list for PBXNativeTarget "Bitpanda TaskUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B750AB8279A0394002F92BE /* Debug */,
-				1B750AB9279A0394002F92BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B79B197279B1455009D6E3F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		1B79B19A279B1A71009D6E3F /* XCRemoteSwiftPackageReference "PocketSVG" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pocketsvg/PocketSVG.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B79B198279B1455009D6E3F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B79B197279B1455009D6E3F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		1B79B19B279B1A71009D6E3F /* PocketSVG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B79B19A279B1A71009D6E3F /* XCRemoteSwiftPackageReference "PocketSVG" */;
+			productName = PocketSVG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B750A7F279A0393002F92BE /* Project object */;
 }

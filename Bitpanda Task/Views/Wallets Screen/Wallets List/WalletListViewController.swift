@@ -11,8 +11,26 @@ import UIKit
 
 class WalletListViewController: SearchableListingViewController{
 
+	//MARK: - Props
+	let walletListDataSource: WalletListDataSource
+	lazy var sumLabel: UILabel = {
+		let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		label.textColor = .label
+		label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+		label.textAlignment = .center
+		return label
+	}()
+	
+	lazy var sumLabelPadded: UIView = {
+		let view = UIView()
+		view.backgroundColor = .systemBackground
+		return view
+	}()
+	
 	//MARK: - init
 	init(title: String, dataSource: WalletListDataSource) {
+		walletListDataSource = dataSource
 		super.init(dataSource: dataSource, tableViewCells: [WalletAssetTableViewCell.self])
 		self.title = title
 		hidesBottomBarWhenPushed = true
@@ -27,8 +45,22 @@ class WalletListViewController: SearchableListingViewController{
         super.viewDidLoad()
 		navigationController?.navigationBar.isTranslucent = true
 		self.navigationController?.navigationBar.tintColor = .label
+		setupSumLabelPadded()
+	}
+	
+	//MARK: - UI Setup
+	func setupSumLabelPadded(){
+		sumLabelPadded.addSubview(sumLabel)
+		sumLabel.topAnchor.constraint(equalTo: sumLabelPadded.topAnchor, constant: 5).isActive = true
+		sumLabel.leadingAnchor.constraint(equalTo: sumLabelPadded.leadingAnchor, constant: 10).isActive = true
+		sumLabel.trailingAnchor.constraint(equalTo: sumLabelPadded.trailingAnchor, constant: -10).isActive = true
+		sumLabel.bottomAnchor.constraint(equalTo: sumLabelPadded.bottomAnchor).isActive = true
+		sumLabel.text = walletListDataSource.totalSumFormatted
 	}
 
+	override func getTableHeaderStackViews() -> [UIView] {
+		return [sumLabelPadded, searchBar]
+	}
 }
 
 

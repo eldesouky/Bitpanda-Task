@@ -8,14 +8,8 @@
 import Foundation
 import UIKit
 
-//MARK: - UIColor + BPTaskColors
 extension UIColor {
-	static var assetCellColor: UIColor? {
-		UIColor(named: "AssetCellColor")
+	static var backButtonColor: UIColor? {
+		UIColor(named: "BackButtonColor")
 	}
-	
-	static var assetTableBackgroundColor: UIColor? {
-		UIColor(named: "AssetTableBackgroundColor")
-	}
-	
 }

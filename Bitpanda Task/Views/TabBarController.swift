@@ -8,37 +8,47 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+	
+	//MARK: -  Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		view.backgroundColor = .systemBackground
-		tabBar.tintColor = .label
-		tabBar.backgroundColor = .systemBackground
-		setupVCs()
-		
-		tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-		tabBar.layer.shadowRadius = 2
-		tabBar.layer.shadowColor = UIColor.black.cgColor
-		tabBar.layer.shadowOpacity = 0.3
+		setupViewControllers()
 	}
 	
-	fileprivate func createNavController(for rootViewController: UIViewController,
-													  title: String,
-													  image: UIImage) -> UIViewController {
-		let navController = UINavigationController(rootViewController: rootViewController)
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setupTabBar()
+	}
+
+	//MARK: -  UI Setup
+	func setupTabBar(){
+		tabBar.tintColor = .label
+		tabBar.backgroundColor = .systemBackground
+		tabBar.isTranslucent = false
+		
+		tabBar.setShadowFor(mode: traitCollection.userInterfaceStyle, lightRadius: 2, darkRadius: 2)
+	}
+	
+	func setupViewControllers() {
+		viewControllers = [
+			createNavController(for: AssetsViewController(), title: NSLocalizedString("Assets", comment: ""), image: UIImage(systemName: "list.bullet")!),
+		   createNavController(for: WalletsViewController(), title: NSLocalizedString("Wallets", comment: ""), image: UIImage(systemName: "creditcard")!),
+	   ]
+	}
+	
+	private func createNavController(for viewController: UIViewController, title: String, image: UIImage) -> UIViewController {
+		viewController.navigationItem.title = title
+		let navController = UINavigationController(rootViewController: viewController)
 		navController.tabBarItem.title = title
 		navController.tabBarItem.image = image
 		navController.navigationBar.prefersLargeTitles = true
 		navController.navigationBar.isTranslucent = false
-		rootViewController.navigationItem.title = title
 		return navController
 	}
 	
-	func setupVCs() {
-		   viewControllers = [
-			   createNavController(for: AssetsViewController(), title: NSLocalizedString("Assets", comment: ""), image: UIImage(systemName: "magnifyingglass")!),
-			   createNavController(for: AssetsViewController(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "person")!),
-		   ]
-	   }
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		super.traitCollectionDidChange(previousTraitCollection)
+		tabBar.setShadowFor(mode: traitCollection.userInterfaceStyle, lightRadius: 2, darkRadius: 2)
+	}
 }

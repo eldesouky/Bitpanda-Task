@@ -8,29 +8,84 @@
 import XCTest
 @testable import Bitpanda_Task
 
+extension String {
+	private var nonBreakingSpace: String { "\u{00a0}"}
+
+	var nonBreakingString: String{
+		return replacingOccurrences(of: " ", with: nonBreakingSpace)
+	}
+}
 class Bitpanda_TaskTests: XCTestCase {
+	
+	/// Test if current DataFormatter.priceFormatter configurations delivers the  price formatting requirements
+	func testPriceFormatting() throws {
+		let price = 1298.99876
+		
+		// locale, precision, expectation
+		let computations = [
+			("de_De", 2, "1.298,99 €"),
+			("en_US", 2, "$1,298.99"),
+			("en_GB", 3, "£1,298.998"),
+			("hu_HU", 2, "1 298,99 Ft")
+		]
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+		for (locale, precision, expectation) in computations {
+			DataFormatter.priceFormatter.locale = Locale(identifier: locale)
+			let result = DataFormatter.format(price: price, withPrecision: precision)
+			XCTAssertEqual(expectation.nonBreakingString, result, locale)
+		}
+	}
+	
+	/// test custom encoding, objects flattening and wallets logos mapping
+	func testUserDataDecoding() throws {
+		guard let data = DataManager.shared.readLocalFile(forName: DataManager.path) else { fatalError("Can't find json file") }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+		let response = try JSONDecoder().decode(UserData.self, from: data)
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+		let crypto = response.cryptoCoins.first
+		XCTAssertEqual(crypto?.name, "Bitcoin")
+		XCTAssertEqual(crypto?.symbol, "BTC")
+		XCTAssertEqual(crypto?.avgPrice, "8936.50")
+		XCTAssertEqual(crypto?.type, .cryptoCoin)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+		let commodities = response.commodities.first
+		XCTAssertEqual(commodities?.name, "Gold")
+		XCTAssertEqual(commodities?.symbol, "XAU")
+		XCTAssertEqual(commodities?.avgPrice, "46.20")
+		XCTAssertEqual(commodities?.type, .commodity)
+		
+		
+		let fiat = response.fiats.first
+		XCTAssertEqual(fiat?.name, "Euro")
+		XCTAssertEqual(fiat?.symbol, "EUR")
+		XCTAssertEqual(fiat?.type, .fiat)
+		
+		let cryptoWallet = response.wallets.first
+		XCTAssertEqual(cryptoWallet?.name, "BTC Wallet")
+		XCTAssertEqual(cryptoWallet?.symbol, "BTC")
+		XCTAssertEqual(cryptoWallet?.balance.stringValue, "2.26908585")
+		XCTAssertEqual(cryptoWallet?.balance.doubleValue, 2.26908585)
+		XCTAssertEqual(cryptoWallet?.type, .cryptoCoin)
+		XCTAssertEqual(cryptoWallet?.logo, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/cryptocoin/btc.svg")
+		XCTAssertEqual(cryptoWallet?.logoDark, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/cryptocoin/btc_dark.svg")
 
+		let commodityWallet = response.commodityWallets.first
+		XCTAssertEqual(commodityWallet?.name, "Gold Wallet")
+		XCTAssertEqual(commodityWallet?.symbol, "XAU")
+		XCTAssertEqual(commodityWallet?.balance.stringValue, "11.22758598")
+		XCTAssertEqual(commodityWallet?.balance.doubleValue, 11.22758598)
+		XCTAssertEqual(commodityWallet?.type, .commodity)
+		XCTAssertEqual(commodityWallet?.logo, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/cryptocoin/xau.svg")
+		XCTAssertEqual(commodityWallet?.logoDark, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/cryptocoin/xau_dark.svg")
+
+		
+		let fiatWallet = response.fiats.first
+		XCTAssertEqual(fiatWallet?.name, "Euro")
+		XCTAssertEqual(fiatWallet?.symbol, "EUR")
+		XCTAssertEqual(fiatWallet?.type, .fiat)
+		XCTAssertEqual(fiatWallet?.logo, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/fiat/eur_dark.svg")
+		XCTAssertEqual(fiatWallet?.logoDark, "https://bitpanda-assets.s3-eu-west-1.amazonaws.com/static/fiat/eur_white.svg")
+
+	}
+	
 }

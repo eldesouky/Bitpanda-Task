@@ -28,7 +28,4 @@ extension AssetInterface {
 	}
 }
 
-// MARK: - AssetType
-enum AssetType {
-	case fiat, commodity, cryptoCoin
-}
+

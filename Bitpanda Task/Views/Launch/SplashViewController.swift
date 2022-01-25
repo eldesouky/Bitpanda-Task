@@ -87,8 +87,6 @@ class SplashViewController: UIViewController {
 		entryLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		entryLogo.heightAnchor.constraint(equalToConstant: 50).isActive = true
 		entryLogo.widthAnchor.constraint(equalTo: entryLogo.heightAnchor, multiplier: 3).isActive = true
-		
-		
 	}
 	
 	func setupExitLogo(){
@@ -113,7 +111,6 @@ class SplashViewController: UIViewController {
 		footerLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
 		footerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 	}
-	
 	
 	//MARK: - Actions
 	func startAnimation() {

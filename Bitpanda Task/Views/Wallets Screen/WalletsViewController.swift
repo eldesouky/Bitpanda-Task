@@ -1,5 +1,5 @@
 //
-//  WalletTypesViewController.swift
+//  WalletsViewController.swift
 //  Bitpanda Task
 //
 //  Created by Mahmoud Eldesouky on 23.01.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletTypesViewController: UIViewController {
+class WalletsViewController: UIViewController {
 	
 	//MARK: - Filter
 	enum Filter {
@@ -179,7 +179,7 @@ class WalletTypesViewController: UIViewController {
 		}
 		
 		let dataSource = WalletListDataSource(wallets: data)
-		let vc = WalletsViewController1(title: filter.label,  dataSource: dataSource)
+		let vc = WalletListViewController(title: filter.label,  dataSource: dataSource)
 		navigationController?.pushViewController(vc, animated: true)
 	}
 }

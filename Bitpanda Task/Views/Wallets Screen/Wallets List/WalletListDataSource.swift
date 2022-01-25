@@ -12,6 +12,10 @@ class WalletListDataSource: NSObject, SearchableDataSource {
 	//MARK: - Props
 	var searchQuery: String = ""
 	var wallets: [WalletInterface]
+	var totalSumFormatted: String {
+		let sum = wallets.reduce(0) {$0 + $1.balance.doubleValue}
+		return DataFormatter.format(price: sum, withPrecision: 2)
+	}
 	
 	/// Filtered assets data based on filter state and search query
 	var filteredWallets: [WalletInterface] {

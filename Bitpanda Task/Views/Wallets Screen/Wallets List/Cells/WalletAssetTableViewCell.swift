@@ -54,29 +54,14 @@ class WalletAssetTableViewCell: AssetTableViewCell {
 		addSubview(horizontalSeparatorView)
 
 		horizontalSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-		horizontalSeparatorView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+		horizontalSeparatorView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+		horizontalSeparatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 		horizontalSeparatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 	}
-	
-	// MARK: - Actions
-	override func setCell(content: AssetInterface){
-		super.setCell(content: content)
-		if let content = content as? WalletInterface {
-			self.assetWeight.text = DataFormatter.format(price: content.balance.doubleValue, withPrecision: 2)
-			assetWeight.isHidden = false
-		}
-		else {
-			assetWeight.isHidden = true
-		}
-		
-		if let content = content as? CommodityWallet {
-			self.walletIsDefault.isHidden = !content.isDefault
-		}
-		else {
-			self.walletIsDefault.isHidden = true
-		}
-		
-		if content.type == .fiat {
+
+	/// Sets Fiat Wallet's unique styling
+	func setupStyleFor(type: AssetType){
+		if type == .fiat {
 			containerView.backgroundColor = .clear
 			horizontalSeparatorView.isHidden = false
 		}
@@ -85,4 +70,34 @@ class WalletAssetTableViewCell: AssetTableViewCell {
 			horizontalSeparatorView.isHidden = true
 		}
 	}
+	
+	// MARK: - Actions
+	override func setCell(content: AssetInterface){
+		super.setCell(content: content)
+		
+		setWalletIsDefaultIfPossible()
+		setupStyleFor(type: content.type)
+	}
+
+	/// Override `setAssetWeightIfPossible` with Wallet Interface's own version of asset weight if content is a WalletInterface
+	override func setAssetWeightIfPossible() {
+		if let content = content as? WalletInterface {
+			self.assetWeight.text = DataFormatter.format(price: content.balance.doubleValue, withPrecision: 2)
+			assetWeight.isHidden = false
+		}
+		else {
+			assetWeight.isHidden = true
+		}
+	}
+	
+	/// Sets wallet isDefault tag if content is a CommodityWallet object
+	func setWalletIsDefaultIfPossible() {
+		if let content = content as? CommodityWallet {
+			self.walletIsDefault.isHidden = !content.isDefault
+		}
+		else {
+			self.walletIsDefault.isHidden = true
+		}
+	}
+	
 }

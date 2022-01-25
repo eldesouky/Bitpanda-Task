@@ -7,60 +7,84 @@
 
 import UIKit
 
-//MARK: - AssetsViewController
-class AssetsViewController: UIViewController {
+class AssetsViewController: SearchableListingViewController{
 
 	//MARK: - Props
+	private var assetTableDataSource = AssetTableDataSource()
+
 	private lazy var segmentedControl: UISegmentedControl = {
 		let segmentedControl = UISegmentedControl(items: AssetTableDataSource.Filter.allCases.map {$0.label})
 		segmentedControl.translatesAutoresizingMaskIntoConstraints = false
 		segmentedControl.selectedSegmentIndex = assetTableDataSource.filter.rawValue
-		segmentedControl.isSpringLoaded = true
+		segmentedControl.apportionsSegmentWidthsByContent = true
 		segmentedControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
 		return segmentedControl
 	}()
 	
-	private lazy var tableView: UITableView = {
-		let tableView = UITableView()
-		tableView.translatesAutoresizingMaskIntoConstraints = false
-		tableView.dataSource = assetTableDataSource
-		tableView.delegate = self
-		tableView.separatorStyle = .none
-		tableView.backgroundColor = .systemBackground
-		return tableView
+	lazy var segmentedControlPadded: UIView = {
+		let view = UIView()
+		view.backgroundColor = .systemBackground
+		return view
 	}()
 	
-	private lazy var assetTableDataSource = AssetTableDataSource()
+	//MARK: - init
+	init() {
+		super.init(dataSource: assetTableDataSource, tableViewCells: [AssetTableViewCell.self])
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 	
 	//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-		setupTableView()
-		view.backgroundColor = .systemBackground
-
+		setupSwipeGestures()
+		setupSegmentedControlPadded()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		reloadData()
+		reloadData(withAnimation: false)
 	}
 	
 	//MARK: - UI Setup
 	
-	private func setupTableView() {
-		view.addSubview(tableView)
-		tableView.register(AssetTableViewCell.self, forCellReuseIdentifier: AssetTableDataSource.assetTableViewCell)
-		tableView.register(CommodityAssetTableViewCell.self, forCellReuseIdentifier: AssetTableDataSource.commodityAssetTableViewCell)
-		tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-		tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-		tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-		tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
-	 }
+	/// sets tableView horizontal swipe gestures targets
+	private func setupSwipeGestures(){
+		let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleLeftSwipe))
+		swipeLeftRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+		tableView.addGestureRecognizer(swipeLeftRecognizer)
+		
+		let swipeRightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleRightSwipe))
+		swipeRightRecognizer.direction = UISwipeGestureRecognizer.Direction.right
+		tableView.addGestureRecognizer(swipeRightRecognizer)
+	}
+	
+	/// sets up a container view for segmentedControl to manipulate its padding and align it to searchBar view
+	func setupSegmentedControlPadded(){
+		segmentedControlPadded.addSubview(segmentedControl)
+		segmentedControl.topAnchor.constraint(equalTo: segmentedControlPadded.topAnchor).isActive = true
+		segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlPadded.leadingAnchor, constant: 8).isActive = true
+		segmentedControl.trailingAnchor.constraint(equalTo: segmentedControlPadded.trailingAnchor, constant: -8).isActive = true
+		segmentedControl.bottomAnchor.constraint(equalTo: segmentedControlPadded.bottomAnchor, constant: -5).isActive = true
+	}
+	
+	override func getTableHeaderStackViews() -> [UIView] {
+		// append segmentedControlPadded to header
+		return [searchBar, segmentedControlPadded]
+	}
 	
 	//MARK: - Actions
-	private func reloadData(){
+	/// fetches data from source and reload the tableView
+	func reloadData(withAnimation: Bool = true){
 		assetTableDataSource.fetchData()
-		reloadTableViewWithAnimation()
+		if withAnimation {
+			reloadTableViewWithAnimation()
+		}
+		else {
+			tableView.reloadData()
+		}
 	}
 	
 	@objc private func segmentedValueChanged(_ sender:UISegmentedControl!){
@@ -68,31 +92,15 @@ class AssetsViewController: UIViewController {
 		reloadTableViewWithAnimation()
 	}
 	
-	private func reloadTableViewWithAnimation(){
-		UIView.transition(with: tableView,
-						  duration: 0.4,
-						  options: .transitionCrossDissolve,
-						  animations: { self.tableView.reloadData() })
-	}
-	   
-}
-
-//MARK: - UITableViewDelegate
-extension AssetsViewController: UITableViewDelegate {
-
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		let headerView = UIView()
-		headerView.backgroundColor = .systemBackground
-		setupSegmentedControl(into: headerView)
-		return headerView
-	}
+	@objc func handleLeftSwipe(gesture: UISwipeGestureRecognizer) {
+		assetTableDataSource.moveFilterForward()
+		segmentedControl.selectedSegmentIndex = assetTableDataSource.filter.rawValue
+		reloadTableViewWithAnimation()
+	  }
 	
-	//MARK:- UI Setup
-	private func setupSegmentedControl(into: UIView) {
-		into.addSubview(segmentedControl)
-		segmentedControl.topAnchor.constraint(equalTo: into.topAnchor, constant: 10).isActive = true
-		segmentedControl.leftAnchor.constraint(equalTo: into.leftAnchor, constant: 10).isActive = true
-		segmentedControl.rightAnchor.constraint(equalTo: into.rightAnchor, constant: -10).isActive = true
-		segmentedControl.bottomAnchor.constraint(equalTo: into.bottomAnchor, constant: -10).isActive = true
-	 }
+	@objc func handleRightSwipe(gesture: UISwipeGestureRecognizer) {
+		assetTableDataSource.moveFilterBackwards()
+		segmentedControl.selectedSegmentIndex = assetTableDataSource.filter.rawValue
+		reloadTableViewWithAnimation()
+	}
 }

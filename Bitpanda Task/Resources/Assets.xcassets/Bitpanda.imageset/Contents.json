@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Bitpanda-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Bitpanda-1.png",
+      "filename" : "bitpanda.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

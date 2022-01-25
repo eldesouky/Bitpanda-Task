@@ -3,7 +3,7 @@
 ## Setup:
 
  - Xcode: 13.2.1 
- - Deployment Target: iOS 13.0  
+ - iOS Deployment Target: 13.0  
  - Swift 5
 
 ## General:
@@ -43,9 +43,12 @@
  - Pocket SVG
 
 ## Top Todos (If was a real project):
- - Add localization
- - Increase unit testing coverage
- - Add UI testing
- - Network:
+
+- Apply GitFlow
+- Add localization
+- Add linter
+- Increase unit testing coverage
+- Add UI testing
+- Network:
   - Separate network layer with generic decoding
   - data persistence 

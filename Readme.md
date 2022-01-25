@@ -1,12 +1,12 @@
 # Bitpanda Task
 
-## Setup:
+## Setup
 
  - Xcode: 13.2.1 
  - iOS Deployment Target: 13.0  
  - Swift 5
 
-## General:
+## General
 
 - Full dark mode support while taking into account the right logo for each mode (Inverted fiat logos to match design).
 - All app list view inherits from the base `SearchableTableViewController` with a search by name or symbol functionality and animated data reload.
@@ -38,11 +38,11 @@
 - Fiat wallets cells uniquely designed. 
 - Wallet group's sum added in `WalletListViewController` table view header.
 
-## Packages used:
+## Packages Used
  - KingFisher
  - Pocket SVG
 
-## Top Todos (If was a real project):
+## Future Work (If was real project)
 
 - Apply GitFlow
 - Add localization

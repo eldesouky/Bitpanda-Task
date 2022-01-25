@@ -34,7 +34,7 @@ class SearchableListingViewController: UIViewController {
 		tableView.dataSource = dataSource
 		tableView.delegate = self
 		if #available(iOS 15.0, *) {
-			//tableView.sectionHeaderTopPadding = .leastNormalMagnitude
+			tableView.sectionHeaderTopPadding = .leastNormalMagnitude
 		}
 		tableView.separatorStyle = .none
 		tableView.backgroundColor = .systemBackground

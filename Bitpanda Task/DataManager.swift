@@ -77,7 +77,7 @@ class DataManager {
 		do {
 			if let bundlePath = Bundle.main.path(forResource: name,
 												 ofType: "json"),
-				let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+			   let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
 				return jsonData
 			}
 		} catch {

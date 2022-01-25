@@ -43,8 +43,7 @@ class WalletListViewController: SearchableListingViewController{
 	//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-		navigationController?.navigationBar.isTranslucent = true
-		self.navigationController?.navigationBar.tintColor = .label
+		extendedLayoutIncludesOpaqueBars = true
 		setupSumLabelPadded()
 	}
 	

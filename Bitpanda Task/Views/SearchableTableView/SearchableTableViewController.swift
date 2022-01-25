@@ -22,6 +22,7 @@ class SearchableListingViewController: UIViewController {
 	lazy var searchBar: UISearchBar = {
 		let searchBar = UISearchBar()
 		searchBar.delegate = self
+		searchBar.backgroundColor = .systemBackground
 		searchBar.searchBarStyle = .minimal
 		searchBar.placeholder = "Search"
 		return searchBar

@@ -1,6 +1,12 @@
 # Bitpanda Task
 
-## Setup
+![Splash Screen](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/splash.gif) 
+![Light Mode](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/light_mode.gif)
+![Dark Mode](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/dark_mode.gif)
+![Apperance Support](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/apperance_support.gif)
+
+     Splash Screen                 LightMode                     DarkMode             Apperance Support
+## Setup 
 
  - Xcode: 13.2.1 
  - iOS Deployment Target: 13.0  

@@ -5,6 +5,7 @@
  - Xcode: 13.2.1 
  - iOS Deployment Target: 13.0  
  - Swift 5
+ - Resolve swift package versions
 
 ## General
 

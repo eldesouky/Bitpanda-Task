@@ -17,7 +17,7 @@ class SplashViewController: UIViewController {
 		let imageView = UIImageView()
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.contentMode = .scaleAspectFit
-		imageView.image = UIImage(named: "bitpanda")
+		imageView.image = UIImage(named: "bitpanda_splash_logo")
 		imageView.tintColor = .label
 		return imageView
 	}()

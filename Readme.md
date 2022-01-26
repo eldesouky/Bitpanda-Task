@@ -14,14 +14,18 @@
 - Using a custom decoder to bypass the nested JSON data and flatten it to usable objects.
 - Used logos from Asset data to compute the logos for Wallet data as they are required and missing.
 
-![Apperance Support](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/apperance_support.gif)
+<p align="center">
+ <img src="https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/apperance_support.gif" alt="Apperance Support">
+</p>
 
 ## Splash Screen
 
 - Splash animation added.
 - Used tinting method to support different appearance modes (color the logo), due to lack of asset resources. In a real project, I would have used 2 images (one for each mode). Hence, there might be a very slight flicker in the animation.
 
-![Splash Screen](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/splash.gif) 
+<p align="center">
+ <img src="https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/splash.gif" alt="Splash Screen">
+</p>
 
 ## Asset Screen
 
@@ -44,10 +48,10 @@
 - Wallet group's sum added in `WalletListViewController` table view header.
 
 ## Showcase
-
-![Light Mode](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/light_mode.gif)
-![Dark Mode](https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/dark_mode.gif)
-
+<p align="center">
+ <img src="https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/light_mode.gif" alt="Light Mode">
+  <img src="https://github.com/eldesouky/Bitpanda-Task/blob/master/Readme%20Gifs/dark_mode.gif" alt="Dark Mode">
+</p>
 
 ## Packages Used
  - KingFisher

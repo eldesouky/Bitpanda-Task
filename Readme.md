@@ -26,7 +26,7 @@
 
 - Segment control to filter between crypto coins, commodities, or fiats assets.
 - Horizontal scrolling gestures to switch between different segments.
-- Reading the requirement "price must take the regional **location** of the device into account" made me doubt that it means (1) to fetch the actual user geo location and not (2) the user's locale. Aside from that, the first option will require user permission, and the second doesn't, as I user, I always want to see content formatted according to my preferences and not where I currently am. (German traveler would want to see the data in German format even when he is on a visit to the US). Hence, I assumed the second option. In a real project, I would have communicated my doubts and concerns with the product owner beforehand.
+- Reading the requirement "price must take the regional **location** of the device into account" made me doubt that it means (1) to fetch the actual user geo location and not (2) the user's locale. Aside from that, the first option will require user permission, and the second doesn't, as a user, I always want to see content formatted according to my preferences and not where I currently am. (German traveler would want to see the data in German format even when he is on a visit to the US). Hence, I assumed the second option. In a real project, I would have communicated my doubts and concerns with the product owner beforehand.
 - Precision requirements applied for crypto coins, commodities.
 - Only fiats with wallets are displayed
 - Data sorted ascending by name.
@@ -37,7 +37,7 @@
 - Clicking a wallet group pushes a `WalletListViewController` on the navigation stack.
 - Wallets sorted descending by balance.
 - Used the same formatting mechanism as with the Asset prices (fixed precision to 2 decimal places).
-- Defaults wallets tagged.
+- Default wallets tagged.
 - Deleted wallets hidden.
 - Fiat wallets cells uniquely designed. 
 - Wallet group's sum added in `WalletListViewController` table view header.

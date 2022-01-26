@@ -13,8 +13,8 @@ class AssetTableViewCell: UITableViewCell {
 	
 	//MARK: - Props
 	static let processor = SVGProcessor(size: CGSize(width: 30, height: 30))
-
 	var content: AssetInterface?
+	
 	lazy var containerView: UIView = {
 	   let view = UIView()
 	   view.translatesAutoresizingMaskIntoConstraints = false
@@ -76,7 +76,6 @@ class AssetTableViewCell: UITableViewCell {
 		setupAssetName()
 		setupAssetSymbol()
 		setupAssetWeight()
-
 	}
 	
 	private func setupContainerView(){

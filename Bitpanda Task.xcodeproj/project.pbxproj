@@ -38,9 +38,9 @@
 		1BB64FC4279DBBC500929CB9 /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */; };
 		1BB64FC8279DE95500929CB9 /* WalletTypeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */; };
 		1BE7B8A8279B3687007C5E6A /* AssetListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8A7279B3687007C5E6A /* AssetListDataSource.swift */; };
-		1BE7B8AA279B4B17007C5E6A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8A9279B4B17007C5E6A /* AppColors.swift */; };
 		1BE7B8AE279B850D007C5E6A /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */; };
 		1BE7B8B5279BA034007C5E6A /* WalletListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7B8B4279BA034007C5E6A /* WalletListViewController.swift */; };
+		1BE9B74A27A1A3BD00006212 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9B74927A1A3BD00006212 /* UITableViewCell+Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +86,9 @@
 		1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
 		1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTypeCardView.swift; sourceTree = "<group>"; };
 		1BE7B8A7279B3687007C5E6A /* AssetListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListDataSource.swift; sourceTree = "<group>"; };
-		1BE7B8A9279B4B17007C5E6A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
 		1BE7B8B4279BA034007C5E6A /* WalletListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListViewController.swift; sourceTree = "<group>"; };
+		1BE9B74927A1A3BD00006212 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,9 @@
 		1B60161E279F6FD0009A27ED /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */,
 				1B79B19D279B1ACD009D6E3F /* SVGProcessor.swift */,
+				1BE9B74927A1A3BD00006212 /* UITableViewCell+Identifier.swift */,
 				1B60161C279F6FB6009A27ED /* UIView+Shadow.swift */,
 			);
 			path = Helpers;
@@ -135,6 +137,15 @@
 				1B601621279F753E009A27ED /* SplashViewController.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		1B60162827A15C13009A27ED /* Wallet Types */ = {
+			isa = PBXGroup;
+			children = (
+				1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */,
+				1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */,
+			);
+			path = "Wallet Types";
 			sourceTree = "<group>";
 		};
 		1B61D7CB279CC0B70035581E /* Assets */ = {
@@ -183,7 +194,6 @@
 				1B750A8A279A0393002F92BE /* AppDelegate.swift */,
 				1B750A8C279A0393002F92BE /* SceneDelegate.swift */,
 				1B750ABC279A1129002F92BE /* DataManager.swift */,
-				1BE7B8AD279B850D007C5E6A /* DataFormatter.swift */,
 				1BE7B8AF279B8539007C5E6A /* Resources */,
 				1BE7B8B2279B859E007C5E6A /* Models */,
 				1BE7B8B0279B855F007C5E6A /* Views */,
@@ -223,7 +233,6 @@
 			children = (
 				1B60162427A0941A009A27ED /* Info.plist */,
 				1B750ABE279A220B002F92BE /* Mastrerdata.json */,
-				1BE7B8A9279B4B17007C5E6A /* AppColors.swift */,
 				1B750A93279A0394002F92BE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -273,8 +282,7 @@
 		1BE7B8B6279C3991007C5E6A /* Wallets Screen */ = {
 			isa = PBXGroup;
 			children = (
-				1BB64FC3279DBBC500929CB9 /* WalletsViewController.swift */,
-				1BB64FC7279DE95500929CB9 /* WalletTypeCardView.swift */,
+				1B60162827A15C13009A27ED /* Wallet Types */,
 				1BB64FC9279E018400929CB9 /* Wallets List */,
 			);
 			path = "Wallets Screen";
@@ -394,8 +402,8 @@
 				1BB64FBC279DA0FD00929CB9 /* WalletListDataSource.swift in Sources */,
 				1B60161D279F6FB6009A27ED /* UIView+Shadow.swift in Sources */,
 				1B750AC1279B0369002F92BE /* UserData.swift in Sources */,
-				1BE7B8AA279B4B17007C5E6A /* AppColors.swift in Sources */,
 				1B750ABD279A1129002F92BE /* DataManager.swift in Sources */,
+				1BE9B74A27A1A3BD00006212 /* UITableViewCell+Identifier.swift in Sources */,
 				1BB64FBA279DA07600929CB9 /* SearchableDataSource.swift in Sources */,
 				1B61D7D3279CC1F20035581E /* CommodityWallet.swift in Sources */,
 				1BB64FC8279DE95500929CB9 /* WalletTypeCardView.swift in Sources */,

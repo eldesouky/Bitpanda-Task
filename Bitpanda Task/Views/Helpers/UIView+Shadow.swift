@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+	/// sets different shadow radiuses based on light/dark apperance
 	func setShadowFor(mode: UIUserInterfaceStyle, lightRadius: CGFloat, darkRadius: CGFloat){
 		layer.shadowColor = UIColor.label.cgColor
 		layer.shadowOpacity = 0.2

@@ -8,21 +8,16 @@
 import UIKit
 import SwiftUI
 
-
-extension UITableViewCell {
-	class func cellReuseIdentifier() -> String {
-		return "\(self)"
-	}
-}
-
-//MARK: - SearchableListingViewController
 class SearchableListingViewController: UIViewController {
 	
 	//MARK: - Props
+	var dataSource: SearchableDataSource
+	var tableViewCells: [UITableViewCell.Type]
+	
 	lazy var searchBar: UISearchBar = {
 		let searchBar = UISearchBar()
 		searchBar.delegate = self
-		searchBar.backgroundColor = .systemBackground
+		searchBar.autocorrectionType = .no
 		searchBar.searchBarStyle = .minimal
 		searchBar.placeholder = "Search"
 		return searchBar
@@ -42,11 +37,7 @@ class SearchableListingViewController: UIViewController {
 		return tableView
 	}()
 	
-	var dataSource: SearchableDataSource
-	var tableViewCells: [UITableViewCell.Type]
-	
 	//MARK: - init
-
 	init(dataSource: SearchableDataSource, tableViewCells: [UITableViewCell.Type]){
 		self.dataSource = dataSource
 		self.tableViewCells = tableViewCells
@@ -60,7 +51,7 @@ class SearchableListingViewController: UIViewController {
 	//MARK: - Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationController?.edgesForExtendedLayout = []
+		
 		setupTableView()
 		addKeyboardDismissGesture()
 		setupSearchBarDismissButton()

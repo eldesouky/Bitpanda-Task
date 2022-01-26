@@ -85,7 +85,6 @@ class WalletsViewController: UIViewController {
 	//MARK: - Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		wallets = DataManager.shared.fetchWallets()
 		setupViews()
 	}
@@ -99,7 +98,6 @@ class WalletsViewController: UIViewController {
 	}
 	
 	func setupViews(){
-		edgesForExtendedLayout = []
 		setupContainerView()
 		setupSeparatorViews()
 		setupWalletTypeCards()
@@ -107,9 +105,10 @@ class WalletsViewController: UIViewController {
 	
 	func setupContainerView(){
 		view.addSubview(containerView)
-		containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+		containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
 		containerView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25).isActive = true
 		containerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25).isActive = true
+		containerView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 50).isActive = true
 		containerView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: -150).isActive = true
 	}
 	

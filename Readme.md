@@ -16,13 +16,13 @@
 ## Splash Screen
 
 - Splash animation added.
-- Used tinting method to support different appearance modes (color the logo) due to lack of asset resources. In a real project, I would have used 2 images (one for each mode). Hence, there might be a very slight flicker in the animation.
+- Used tinting method to support different appearance modes (color the logo), due to lack of asset resources. In a real project, I would have used 2 images (one for each mode). Hence, there might be a very slight flicker in the animation.
 
 ## Asset Screen
 
 - Segment control to filter between crypto coins, commodities, or fiats assets.
 - Horizontal scrolling gestures to switch between different segments.
-- Reading the requirement "price must take the regional location of the device into account" made me doubt that it means (1) to fetch the actual user geo location and not (2) the user's locale. Aside from that, the first option will require user permission, and the second doesn't, as I user, I always want to see content formatted according to my preferences and not where I currently am. (German traveler would want to see the data in German format even when he is on a visit to the US). Hence, I assumed the second option. In a real project, I would have communicated my doubts and concerns with the product owner beforehand.
+- Reading the requirement "price must take the regional **location** of the device into account" made me doubt that it means (1) to fetch the actual user geo location and not (2) the user's locale. Aside from that, the first option will require user permission, and the second doesn't, as I user, I always want to see content formatted according to my preferences and not where I currently am. (German traveler would want to see the data in German format even when he is on a visit to the US). Hence, I assumed the second option. In a real project, I would have communicated my doubts and concerns with the product owner beforehand.
 - Precision requirements applied for crypto coins, commodities.
 - Only fiats with wallets are displayed
 - Data sorted ascending by name.
@@ -42,13 +42,14 @@
  - KingFisher
  - Pocket SVG
 
-## Future Work (If was real project)
+## Future Work (If it was a real project)
 
-- Apply GitFlow
-- Add localization
-- Add linter
-- Increase unit testing coverage
-- Add UI testing
+- Apply GitFlow.
+- Add localization.
+- Add linter.
+- Increase unit testing coverage.
+- Add UI testing.
+- Split `AssetInterface` and `WalletInterface` based on future progress.
 - Network:
-  - Separate network layer with generic decoding
-  - data persistence 
+  - Separate network layer with generic decoding.
+  - data persistence.

@@ -179,6 +179,7 @@ class WalletsViewController: UIViewController {
 		
 		let dataSource = WalletListDataSource(wallets: data)
 		let vc = WalletListViewController(title: filter.label,  dataSource: dataSource)
+		vc.hidesBottomBarWhenPushed = true
 		navigationController?.pushViewController(vc, animated: true)
 	}
 }

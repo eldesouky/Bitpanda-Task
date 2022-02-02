@@ -42,11 +42,7 @@ class WalletListViewController: SearchableListingViewController{
 	//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		hidesBottomBarWhenPushed = true
 		extendedLayoutIncludesOpaqueBars = true
-		navigationController?.edgesForExtendedLayout = []
-		
 		setupSumLabelPadded()
 	}
 	

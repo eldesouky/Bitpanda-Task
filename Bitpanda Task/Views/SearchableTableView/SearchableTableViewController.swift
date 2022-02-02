@@ -19,6 +19,7 @@ class SearchableListingViewController: UIViewController {
 		searchBar.delegate = self
 		searchBar.autocorrectionType = .no
 		searchBar.searchBarStyle = .minimal
+		searchBar.backgroundColor = .systemBackground
 		searchBar.placeholder = "Search"
 		return searchBar
 	}()
